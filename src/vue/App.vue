@@ -53,7 +53,7 @@
                         <br>
                         <br>
 
-                        <div class="pphrase">BlueForest est une plateforme numérique un peu unique. Des experts de différents secteurs, des entreprises, des associations et des particuliers pourront collecter et de connecter des informations sur les matières premières, l'énergie, les déchets... Et ainsi construire une base de connaissances inédite et
+                        <div class="pphrase">BlueForest est une plateforme numérique un peu unique. Des experts de différents secteurs, des entreprises, des associations et des particuliers peuvent collecter et connecter leurs informations sur les matières premières, l'énergie, les déchets... Et ainsi construire une base de connaissances inédite et
                             utilisable par tout le monde.
                         </div>
 
