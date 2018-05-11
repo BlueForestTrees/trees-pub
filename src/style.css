@@ -9,6 +9,13 @@
     color: #343434;
 }
 
+.pphrase {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    padding-top: 1em;
+    color: #242424;
+}
+
 body {
     text-align: center;
 }

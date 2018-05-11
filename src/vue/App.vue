@@ -2,14 +2,22 @@
     <div id="app">
         <v-app light>
             <v-layout column>
-                <t-play :film="film"></t-play>
+                <t-play :film="intro"></t-play>
                 <transition name="slide-y-reverse-transition">
-                    <v-flex v-if="filmEnd" flex xs-12 sm-2 offset-8>
-                        <div class="phrase">Nos achats sont des bulletins de vote. Et si on savait se qui se cache derrière nos produits?</div>
-                        <div class="phrase">Qu'est ce qui, dans mes achats, est plus ou moins "propre" ?</div>
-
+                    <v-flex v-if="introEnd">
+                        <div class="phrase">Nos achats sont de vrais bulletins de vote.</div>
+                        <div class="phrase">Et si on savait se qui se cache derrière nos produits ?</div>
                         <div class="phrase">Et si on pouvait proposer directement aux fabricants les modifications que l'on veut ?</div>
+                        <div class="phrase">Et si les fabricants pouvaient plus facilement montrer leur progrès ?</div>
                         <div class="phrase">Et si on avait un moteur de recherche de déchets ?</div>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <img class="logo" src="logo/foret.svg"/>
+
+                        <!--<div class="phrase">Qu'est ce qui, dans mes achats, est plus ou moins "propre" ?</div>-->
 
                         <!--<div class="phrase">La bonne façon d'acheter</div>-->
                         <!--<div class="phrase">La bonne façon de vendre</div>-->
@@ -40,49 +48,57 @@
                         <!--<div class="phrase">Créer des produits ou des compositions de services à partir de produits existants</div>-->
                         <!--<div class="phrase">Apporter mon expertise en documentant ou en indiquant les sources attestant une information</div>-->
                         <!--<div class="phrase">Diffuser et pérenniser une étude environnementale en la connectant au reste du monde</div>-->
-
-
-                        <div class="phrase">Pourquoi ces questions?</div>
-                        <div class="phrase">Parce que BlueForest est un projet de plateforme numérique qui va permettre les réponses.</div>
-                        <div class="phrase">En permettant de collecter et connecter de manière transparente les données (matières premières, énergie, déchets...)</div>
-                        <div class="phrase">Des experts de différents secteurs, des entreprises, des associations et des particuliers</div>
-                        <div class="phrase">Afin de construire une base de connaissances inédite et utilisable par tous.</div>
-
+                        <br>
+                        <br>
                         <br>
                         <br>
 
-                        <div class="phrase">Vis-à-vis du co2, acheter 1kg de tomate en hiver revient à acheter 1 tonne de tomate en été.</div>
+                        <div class="pphrase">BlueForest est une plateforme numérique un peu unique. Des experts de différents secteurs, des entreprises, des associations et des particuliers pourront collecter et de connecter des informations sur les matières premières, l'énergie, les déchets... Et ainsi construire une base de connaissances inédite et
+                            utilisable par tout le monde.
+                        </div>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="phrase">Exemple d'informations qui se construisent petit à petit sur Blueforest:</div>
+                        <div class="phrase">Pour le co2, acheter 1kg de tomate en hiver revient à acheter 1 tonne de tomate en été.</div>
                         <div class="phrase">Il y a autant de vitamines C dans 1 pomme en 1950 que dans 20kg de pommes aujourd'hui.</div>
-                        <div class="phrase">Un filet d'espadon contient 200kg de phyto-plancton.</div>
-                        <div class="phrase">Mettre un couvercle pour faire cuire les pâtes revient à économiser 3 ampoules allumées toute l'année</div>
-                        <br>
-                        <br><div class="phrase">Ensemble, élevons le niveau de la discussion en matière d'environnement.</div>
-                        <br><div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
+                        <div class="phrase">Un filet d'espadon a nécessité 200kg de phyto-plancton.</div>
+                        <div class="phrase">200kg de phyto-plancton absorbe autant de co2 en un an qu'en émet une voiture en 15 minutes.</div>
                         <br>
                         <br>
-                        <v-card v-if="done" transition="scale-transition" origin="center center">
-                            <img class="logo" src="logo/mount.svg"/>
-                            Merci! A bientôt
-                        </v-card>
-                        <v-card v-else>
-                            <v-toolbar card dark color="primary">
-                                <v-btn icon @click.native="visible = false" dark>
+                        <img class="logo" src="logo/produits.svg"/>
+                        <br>
+                        <br>
+                        <div class="phrase">Ensemble, élevons le niveau de la discussion en matière d'environnement.</div>
+                        <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
+                        <br>
+                        <br>
+                        <center>
+
+                            <v-card v-if="done" transition="scale-transition" origin="center center">
+                                <t-play :film="outro"></t-play>
+                            </v-card>
+                            <v-card v-else style="max-width: 50%;min-width:40em">
+                                <v-toolbar card dark color="primary">
                                     <v-icon large>add_alert</v-icon>
-                                </v-btn>
-                                <v-toolbar-title>Pour suivre BlueForest...</v-toolbar-title>
-                            </v-toolbar>
-                            <v-container fluid>
-                                <v-form v-model="valid" v-on:submit.prevent="validate" ref="form">
-                                    <v-text-field type="mail" label="mail" v-model="mail" required :rules="[rules.required, rules.email]"/>
-                                    <v-text-field type="text" label="commentaire" v-model="message" multi-line required :rules="[rules.required, rules.minlength, rules.maxlength]" counter="250"/>
-                                </v-form>
-                            </v-container>
-                            <v-card-actions>
-                                <v-btn block @click="validate" large color="green">
-                                    <v-icon x-large color="white">check</v-icon>
-                                </v-btn>
-                            </v-card-actions>
-                        </v-card>
+                                    <v-toolbar-title>Tout le monde décide, tout le monde propose</v-toolbar-title>
+                                </v-toolbar>
+                                <v-container fluid>
+                                    <v-form v-model="valid" v-on:submit.prevent="validate" ref="form">
+                                        <v-text-field type="mail" label="mail" v-model="mail" required :rules="[rules.required, rules.email]"/>
+                                        <v-text-field type="text" label="commentaire" v-model="message" multi-line required :rules="[rules.required, rules.minlength, rules.maxlength]" counter="250"/>
+                                    </v-form>
+                                </v-container>
+                                <v-card-actions>
+                                    <v-btn block @click="validate" large color="green">
+                                        <v-icon x-large color="white">check</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </center>
                         <br>
                         <br>
                         <br>
@@ -102,26 +118,30 @@
 
     const url = window.location.href + "api/feedback";
     const send = body => req.post(url, {body, json: true});
-    const filmTitle = "blue-forest";
+    const introTitle = "blue-forest";
+    const outroTitle = "merci";
 
     export default {
         name: 'app',
         components: {TPlay},
         beforeCreate: function () {
-            getFilmByName(filmTitle)
+            getFilmByName(introTitle)
                 .then(film => {
                     if (film) {
-                        this.film = film;
-                        play(this.film);
+                        this.intro = film;
+                        play(this.intro);
                     } else {
-                        this.filmEnd = true;
+                        this.introEnd = true;
                     }
                 });
+            getFilmByName(outroTitle)
+                .then(f => this.outro = f);
         },
         data: function () {
             return {
-                film: null,
-                filmEnd: false,
+                intro: null,
+                outro: null,
+                introEnd: false,
                 mail: null,
                 message: null,
                 valid: null,
@@ -151,9 +171,14 @@
             }
         },
         watch: {
-            'film.f.player.playing': function (v) {
+            'intro.f.player.playing': function (v) {
                 if (!v) {
-                    this.filmEnd = true;
+                    this.introEnd = true;
+                }
+            },
+            done: function (v) {
+                if (v) {
+                    play(this.outro);
                 }
             }
         }
