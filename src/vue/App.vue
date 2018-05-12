@@ -63,8 +63,8 @@
 
                         <div class="phrase">Pour le co2, acheter 1kg de tomate en hiver revient à acheter 1 tonne de tomate en été.</div>
                         <div class="phrase">Il y avait autant de vitamines C dans 1 pomme en 1950 que dans 20kg de pommes aujourd'hui.</div>
-                        <div class="phrase">Un filet d'espadon a nécessité 200kg de phyto-plancton.</div>
                         <div class="phrase">200kg de phyto-plancton absorbe autant de co2 en un an qu'en émet une voiture en 15 minutes.</div>
+                        <div class="phrase">Un filet d'espadon a nécessité 200kg de phyto-plancton.</div>
                         <br>
                         <br>
                         <img class="logo" src="logo/produits.svg"/>
