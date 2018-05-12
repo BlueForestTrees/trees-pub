@@ -6,10 +6,9 @@
                 <transition name="slide-y-reverse-transition">
                     <v-flex v-if="introEnd">
                         <div class="phrase">Nos achats sont de vrais bulletins de vote.</div>
-                        <div class="phrase">Et si on savait se qui se cache derrière nos produits ?</div>
-                        <div class="phrase">Et si on pouvait proposer directement aux fabricants les modifications que l'on veut ?</div>
-                        <div class="phrase">Et si les fabricants pouvaient plus facilement montrer leur progrès ?</div>
-                        <div class="phrase">Et si on avait un moteur de recherche de déchets ?</div>
+                        <div class="phrase">Et si on savait ce qui se cache derrière nos produits ?</div>
+                        <div class="phrase">Et si les fabricants pouvaient montrer ce qu'ils font pour la planète ?</div>
+                        <div class="phrase">Et si on pouvait proposer aux fabricants les changements que l'on veut ?</div>
 
                         <br>
                         <br>
@@ -53,18 +52,17 @@
                         <br>
                         <br>
 
-                        <div class="pphrase">BlueForest est une plateforme numérique un peu unique. Des experts de différents secteurs, des entreprises, des associations et des particuliers peuvent collecter et connecter leurs informations sur les matières premières, l'énergie, les déchets... Et ainsi construire une base de connaissances inédite et
-                            utilisable par tout le monde.
-                        </div>
+                        <div class="phrase">BlueForest est unique</div>
+                        <div class="pphrase">Nous, particuliers, associations, entreprises, chercheurs, autorités publique, pouvons y intégrer nos informations sur les matières premières, l'énergie, les déchets...</div>
+                        <div class="pphrase">Et ainsi construire une base de connaissances inédite et utilisable par tout le monde. Par exemple:</div>
 
                         <br>
                         <br>
                         <br>
                         <br>
 
-                        <div class="phrase">Exemple d'informations qui se construisent petit à petit sur Blueforest:</div>
                         <div class="phrase">Pour le co2, acheter 1kg de tomate en hiver revient à acheter 1 tonne de tomate en été.</div>
-                        <div class="phrase">Il y a autant de vitamines C dans 1 pomme en 1950 que dans 20kg de pommes aujourd'hui.</div>
+                        <div class="phrase">Il y avait autant de vitamines C dans 1 pomme en 1950 que dans 20kg de pommes aujourd'hui.</div>
                         <div class="phrase">Un filet d'espadon a nécessité 200kg de phyto-plancton.</div>
                         <div class="phrase">200kg de phyto-plancton absorbe autant de co2 en un an qu'en émet une voiture en 15 minutes.</div>
                         <br>
@@ -81,10 +79,10 @@
                             <v-card v-if="done" transition="scale-transition" origin="center center">
                                 <t-play :film="outro"></t-play>
                             </v-card>
-                            <v-card v-else style="max-width: 50%;min-width:40em">
+                            <v-card v-else style="max-width: 40em;min-width:20em">
                                 <v-toolbar card dark color="primary">
-                                    <v-icon large>add_alert</v-icon>
-                                    <v-toolbar-title>Tout le monde décide, tout le monde propose</v-toolbar-title>
+                                    <v-btn flat icon @click="egg = true"><v-icon large>add_alert</v-icon></v-btn>
+                                    <v-toolbar-title v-if="egg">Que faire en premier?</v-toolbar-title>
                                 </v-toolbar>
                                 <v-container fluid>
                                     <v-form v-model="valid" v-on:submit.prevent="validate" ref="form">
@@ -139,6 +137,7 @@
         },
         data: function () {
             return {
+                egg:null,
                 intro: null,
                 outro: null,
                 introEnd: false,
