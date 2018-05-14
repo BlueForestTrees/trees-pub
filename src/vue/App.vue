@@ -2,7 +2,7 @@
     <div id="app">
         <v-app light>
             <v-layout column>
-                <t-play :film="intro"></t-play>
+                <center><t-play style="max-width: 80em;" :film="intro"></t-play></center>
                 <transition name="slide-y-reverse-transition">
                     <v-flex v-if="introEnd">
                         <div class="phrase">Nos achats sont de vrais bulletins de vote.</div>

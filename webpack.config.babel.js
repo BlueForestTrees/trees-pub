@@ -27,6 +27,8 @@ const conf = {
     },
     plugins: [
         new HtmlWebpackPlugin({template: './src/index.html', inject: 'body', hash: 'true'}),
+        new CopyWebpackPlugin([{from: './src/img', to: 'img'}]),
+        new CopyWebpackPlugin([{from: './src/browserconfig.xml', to: '.'}]),
         new CopyWebpackPlugin([{from: './src/logo', to: 'logo'}]),
         new CopyWebpackPlugin([{from: './src/lottie', to: 'lottie'}]),
         new CopyWebpackPlugin([{from: './src/S01', to: 'S01'}]),
