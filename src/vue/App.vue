@@ -26,74 +26,138 @@
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <br>
-                        <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" hide-delimiters>
-                            <h1>On trouve 100mg de vitamines C dans...</h1>
+                        <v-layout row style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto">
+                            <v-btn block @click="show = 0">Ressources</v-btn>
+                            <v-btn block @click="show = 1">Nutrition</v-btn>
+                            <v-btn block @click="show = 2">Pollution</v-btn>
+                        </v-layout>
+
+
+
+
+
+
+
+
+
+
+
+                        <span v-if="show === 0">
+                            <v-toolbar style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto"><v-toolbar-title>On utilise 1 litre d'eau pour:</v-toolbar-title></v-toolbar>
+                            <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" interval="30000" hide-delimiters>
+                                <v-carousel-item>
+                                    <v-card><br><br><img class="logo" src="logo/logo.svg" style="max-width:50%"/><br><br><br></v-card>
+                                    <v-toolbar><v-toolbar-title>Essayez nutrition</v-toolbar-title></v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card><v-card-text class="phrase" style="height:13.6em;margin-left: auto;margin-right:auto"><br><br><br><br><br>Vous connaissez des choses en eau ?</v-card-text></v-card>
+                                    <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
+                                </v-carousel-item>
+                            </v-carousel>
+                        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <span v-if="show === 1">
+                        <v-toolbar style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto"><v-toolbar-title>On a 100mg de vitamines C dans:</v-toolbar-title></v-toolbar>
+                        <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" interval="30000" hide-delimiters>
                             <v-carousel-item>
-                                <img class="logo" src="img/pomme.svg" style="max-width:50%"/>
-                                <v-toolbar>
-                                    <v-toolbar-title>1 Pomme, en 1950</v-toolbar-title>
-                                </v-toolbar>
+                                <v-card><img class="logo" src="img/pomme.svg" style="max-width:50%"/></v-card>
+                                <v-toolbar><v-toolbar-title>1 Pomme, en 1950</v-toolbar-title></v-toolbar>
                             </v-carousel-item>
                             <v-carousel-item>
-                                <img class="logo" src="img/pommes.svg" style="max-width:50%"/>
-                                <v-toolbar>
-                                    <v-toolbar-title>10kg de pommes, aujourd'hui</v-toolbar-title>
-                                </v-toolbar>
+                                <v-card><img class="logo" src="img/pommes.svg" style="max-width:50%"/></v-card>
+                                <v-toolbar><v-toolbar-title>10kg de pommes, aujourd'hui</v-toolbar-title></v-toolbar>
                             </v-carousel-item>
                             <v-carousel-item>
-                                <br>
-                                <br>
-                                <br>
-                                <div class="phrase">Vous connaissez des choses pointues en vitamine C ?</div>
-                                <br>
-                                <br>
-                                <div class="phrase">Ajoutez-les sur BlueForest</div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
+                                <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses en vitamine C ?</v-card-text></v-card>
+                                <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
                             </v-carousel-item>
                         </v-carousel>
-                        <!--<div class="phrase">Un filet d'espadon a nécessité 200kg de phyto-plancton.</div>-->
+                        </span>
+
+
+
+
+
+
+
+
+
+
+                        <span v-if="show === 2">
+                            <v-toolbar style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto"><v-toolbar-title>On émet 1 tonne de CO2 quand:</v-toolbar-title></v-toolbar>
+                            <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" interval="30000" hide-delimiters>
+                                <v-carousel-item>
+                                    <v-card><br><br><img class="logo" src="logo/logo.svg" style="max-width:50%"/><br><br><br></v-card>
+                                    <v-toolbar><v-toolbar-title>Essayez nutrition</v-toolbar-title></v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses en CO2 ?</v-card-text></v-card>
+                                    <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
+                                </v-carousel-item>
+                            </v-carousel>
+                        </span>
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <br>
-                        <div class="phrase">Ensemble, élevons le niveau de la discussion.</div>
-                        <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
-                        <br>
-                        <br>
-                        <v-card v-if="done" transition="scale-transition" origin="center center" style="margin-left: auto;margin-right:auto">
-                            <t-play :film="outro"></t-play>
-                        </v-card>
-                        <v-card v-else style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto">
-                            <v-toolbar card dark color="primary">
-                                <v-icon large>add_alert</v-icon>
-                                <v-toolbar-title>Intéressé par la suite?</v-toolbar-title>
-                            </v-toolbar>
-                            <v-container fluid>
-                                <v-form v-model="valid" v-on:submit.prevent="validate" ref="form">
-                                    <v-text-field type="mail" label="mail" v-model="mail" required :rules="[rules.required, rules.email]"/>
-                                    <v-text-field type="text" label="commentaire" v-model="message" multi-line required :rules="[rules.required, rules.minlength, rules.maxlength]" counter="250"/>
-                                </v-form>
-                            </v-container>
-                            <v-card-actions>
-                                <v-btn block @click="validate" large color="green">
-                                    <v-icon x-large color="white">check</v-icon>
-                                </v-btn>
-                            </v-card-actions>
-                        </v-card>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <img class="logo" src="logo/produits.svg" style="min-width:20em;height:auto"/>
-                        <br>
-                        <br>
-                        <br>
+
+
+
+
+
+
+
+
+
+
+                        <span v-if="show >= 0">
+                            <br>
+                            <br>
+                            <div class="phrase">Ensemble, élevons le niveau de la discussion.</div>
+                            <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
+                            <br>
+                            <br>
+                            <v-card v-if="done" transition="scale-transition" origin="center center" style="margin-left: auto;margin-right:auto">
+                                <t-play :film="outro"></t-play>
+                            </v-card>
+                            <v-card v-else style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto">
+                                <v-toolbar card dark color="primary">
+                                    <v-icon large>add_alert</v-icon>
+                                    <v-toolbar-title>Intéressé par la suite?</v-toolbar-title>
+                                </v-toolbar>
+                                <v-container fluid>
+                                    <v-form v-model="valid" v-on:submit.prevent="validate" ref="form">
+                                        <v-text-field type="mail" label="mail" v-model="mail" required :rules="[rules.required, rules.email]"/>
+                                        <v-text-field type="text" label="commentaire" v-model="message" multi-line required :rules="[rules.required, rules.minlength, rules.maxlength]" counter="250"/>
+                                    </v-form>
+                                </v-container>
+                                <v-card-actions>
+                                    <v-btn block @click="validate" large color="green">
+                                        <v-icon x-large color="white">check</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <img class="logo" src="logo/produits.svg" style="min-width:20em;height:auto"/>
+                            <br>
+                            <br>
+                            <br>
+                        </span>
                     </v-flex>
                 </transition>
             </v-layout>
@@ -134,6 +198,7 @@
                 intro: null,
                 outro: null,
                 introEnd: false,
+                show: -1,
                 mail: null,
                 message: null,
                 valid: null,
