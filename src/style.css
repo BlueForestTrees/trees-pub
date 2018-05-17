@@ -5,17 +5,34 @@
 .phrase {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
     color: #343434;
 }
 
 .pphrase {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
-    padding-top: 1em;
-    color: #242424;
+    font-size: 1em;
+    padding-top: 0.5em;
+    padding-left: 2em;
+    padding-right: 1em;
+    color: #343434;
+}
+
+.question {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20em;
+    color: #343434;
 }
 
 body {
     text-align: center;
+    align-content: center;
+}
+
+.carrousel{
+    max-width: 40em;
+    min-width:20em;
+    height:auto
 }
