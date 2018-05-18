@@ -26,52 +26,25 @@
                         <br>
                         <br>
                         <br>
-                        <v-layout row style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto">
-                            <v-btn block @click="show = 0">Ressources</v-btn>
-                            <v-btn block @click="show = 1">Nutrition</v-btn>
-                            <v-btn block @click="show = 2">Pollution</v-btn>
-                        </v-layout>
 
 
-
-
-
-
-
-
-
-
-
-                        <span v-if="show === 0">
-                            <v-toolbar style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto"><v-toolbar-title>On utilise 1 litre d'eau pour:</v-toolbar-title></v-toolbar>
-                            <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" interval="30000" hide-delimiters>
+                            <v-toolbar class="carousel"><v-toolbar-title>On utilise 1 litre d'eau pour:</v-toolbar-title></v-toolbar>
+                            <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
-                                    <v-card><br><br><img class="logo" src="logo/logo.svg" style="max-width:50%"/><br><br><br></v-card>
-                                    <v-toolbar><v-toolbar-title>Essayez nutrition</v-toolbar-title></v-toolbar>
+                                    <v-card><img class="logo" src="img/eau.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar><v-toolbar-title>en cours...</v-toolbar-title></v-toolbar>
                                 </v-carousel-item>
                                 <v-carousel-item>
-                                    <v-card><v-card-text class="phrase" style="height:13.6em;margin-left: auto;margin-right:auto"><br><br><br><br><br>Vous connaissez des choses en eau ?</v-card-text></v-card>
+                                    <v-card><v-card-text class="phrase" style="height:13.6em;margin-left: auto;margin-right:auto"><br><br><br><br><br>Vous connaissez des choses sur l'eau ?</v-card-text></v-card>
                                     <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
                                 </v-carousel-item>
                             </v-carousel>
-                        </span>
+                        <br>
+                        <br>
+                        <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <span v-if="show === 1">
-                        <v-toolbar style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto"><v-toolbar-title>On a 100mg de vitamines C dans:</v-toolbar-title></v-toolbar>
-                        <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" interval="30000" hide-delimiters>
+                        <v-toolbar class="carousel"><v-toolbar-title>On a 100mg de vitamines C dans:</v-toolbar-title></v-toolbar>
+                        <v-carousel interval="30000" hide-delimiters>
                             <v-carousel-item>
                                 <v-card><img class="logo" src="img/pomme.svg" style="max-width:50%"/></v-card>
                                 <v-toolbar><v-toolbar-title>1 Pomme, en 1950</v-toolbar-title></v-toolbar>
@@ -81,58 +54,40 @@
                                 <v-toolbar><v-toolbar-title>10kg de pommes, aujourd'hui</v-toolbar-title></v-toolbar>
                             </v-carousel-item>
                             <v-carousel-item>
-                                <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses en vitamine C ?</v-card-text></v-card>
+                                <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur la vitamine C ?</v-card-text></v-card>
                                 <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
                             </v-carousel-item>
                         </v-carousel>
-                        </span>
 
-
-
-
-
-
-
-
-
-
-                        <span v-if="show === 2">
-                            <v-toolbar style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto"><v-toolbar-title>On émet 1 tonne de CO2 quand:</v-toolbar-title></v-toolbar>
-                            <v-carousel style="max-width: 40em;min-width:20em;height:auto;margin-left: auto;margin-right:auto" interval="30000" hide-delimiters>
+                        <br>
+                        <br>
+                        <br>
+                            <v-toolbar class="carousel"><v-toolbar-title>On émet 1 tonne de CO2 quand:</v-toolbar-title></v-toolbar>
+                            <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
-                                    <v-card><br><br><img class="logo" src="logo/logo.svg" style="max-width:50%"/><br><br><br></v-card>
-                                    <v-toolbar><v-toolbar-title>Essayez nutrition</v-toolbar-title></v-toolbar>
+                                    <v-card><img class="logo" src="img/co2.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar><v-toolbar-title>en cours...</v-toolbar-title></v-toolbar>
                                 </v-carousel-item>
                                 <v-carousel-item>
-                                    <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses en CO2 ?</v-card-text></v-card>
+                                    <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur le CO2 ?</v-card-text></v-card>
                                     <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
                                 </v-carousel-item>
                             </v-carousel>
-                        </span>
                         <br>
                         <br>
                         <br>
 
 
-
-
-
-
-
-
-
-
-                        <span v-if="show >= 0">
                             <br>
                             <br>
-                            <div class="phrase">Ensemble, élevons le niveau de la discussion.</div>
+                            <div class="phrase">Elevons le niveau ensemble.</div>
                             <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
                             <br>
                             <br>
-                            <v-card v-if="done" transition="scale-transition" origin="center center" style="margin-left: auto;margin-right:auto">
+                            <v-card v-if="done" transition="scale-transition" origin="center center" class="carousel">
                                 <t-play :film="outro"></t-play>
                             </v-card>
-                            <v-card v-else style="max-width: 40em;min-width:20em;margin-left: auto;margin-right:auto">
+                            <v-card v-else class="carousel">
                                 <v-toolbar card dark color="primary">
                                     <v-icon large>add_alert</v-icon>
                                     <v-toolbar-title>Intéressé par la suite?</v-toolbar-title>
@@ -157,7 +112,6 @@
                             <br>
                             <br>
                             <br>
-                        </span>
                     </v-flex>
                 </transition>
             </v-layout>
@@ -198,7 +152,6 @@
                 intro: null,
                 outro: null,
                 introEnd: false,
-                show: -1,
                 mail: null,
                 message: null,
                 valid: null,
