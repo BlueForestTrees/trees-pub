@@ -6,11 +6,7 @@
                     <t-play style="max-width: 80em;margin-left: auto;margin-right:auto" :film="intro"></t-play>
                     <transition name="slide-y-reverse-transition">
                         <span v-if="introEnd">
-                            <v-layout row align-center>
-                                <v-flex>
-                                    <span class="phrase head mid">Nos achats sont de véritables bulletins de vote!</span>
-                                </v-flex>
-                            </v-layout>
+                            <span class="phrase head mid">Nos achats sont de véritables bulletins de vote!</span>
                             <br>
                             <br>
                             <br>
@@ -22,7 +18,9 @@
                             <br>
                             <br>
                             <br>
-                            Particuliers comme entreprises, acheter ce n'est plus seulement acquérir un objet ou utiliser un service. C'est encourager le vendeur à continuer dans la même voie.
+                            <div class="phrase">Acheter n'est plus seulement obtenir un objet ou utiliser un service.</div>
+                            <br>
+                            <div class="phrase">C'est permettre au fabricant à continuer dans la même voie.</div>
 
                             <!--<br>-->
                             <!--<br>-->
@@ -114,6 +112,7 @@
                             <br>
                             <br>
                             <div class="phrase">Elevons le niveau ensemble.</div>
+                            <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
                             <br>
                             <v-card v-if="done" transition="scale-transition" origin="center center" class="carousel">
                                 <t-play :film="outro"></t-play>
@@ -136,7 +135,6 @@
                                 </v-card-actions>
                             </v-card>
                             <br>
-                            <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
                             <br>
                             <br>
                             <br>
