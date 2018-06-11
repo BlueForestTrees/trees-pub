@@ -2,13 +2,26 @@
     max-width: 50em;
 }
 
+.plogo {
+    width: 2.5em;
+    height: 2.5em;
+}
+
 .phrase {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
-    padding-top: 0.5em;
+    padding-top: 0em;
     padding-left: 1em;
     padding-right: 1em;
     color: #343434;
+}
+
+.head {
+    font-size: 2.2em;
+}
+
+.mid{
+    vertical-align: middle;
 }
 
 .pphrase {
@@ -39,6 +52,6 @@ body {
     margin-right: auto
 }
 
-button.btn>div {
+button.btn > div {
     color: #1F1F1F
 }

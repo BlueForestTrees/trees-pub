@@ -1,88 +1,119 @@
 <template>
     <div id="app">
         <v-app light>
-            <v-layout column>
-                <t-play style="max-width: 80em;margin-left: auto;margin-right:auto" :film="intro"></t-play>
-                <transition name="slide-y-reverse-transition">
-                    <v-flex v-if="introEnd">
-                        <div class="phrase">Nos achats sont de vrais bulletins de vote...</div>
-                        <br>
-                        <br>
-                        <br>
-                        <div class="phrase">Et si on voyait ce qui se cache derrière nos produits ?</div>
-                        <br>
-                        <br>
-                        <img class="logo" src="logo/foret.svg"/>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <!--<br>-->
-                        <!--<br>-->
-                        <!--<div class="phrase">Et si les fabricants pouvaient montrer ce qu'ils font pour la planète ?</div>-->
-                        <!--<div class="phrase">Et si on pouvait proposer aux fabricants les changements que l'on veut ?</div>-->
-                        <!--<img class="logo" src="logo/produits.svg"/>-->
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+            <v-container>
+                <v-layout column>
+                    <t-play style="max-width: 80em;margin-left: auto;margin-right:auto" :film="intro"></t-play>
+                    <transition name="slide-y-reverse-transition">
+                        <span v-if="introEnd">
+                            <v-layout row align-center>
+                                <v-flex>
+                                    <span class="phrase head mid">Nos achats sont de véritables bulletins de vote!</span>
+                                </v-flex>
+                            </v-layout>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="phrase">Et si on voyait derrière les produits ?</div>
+                            <br>
+                            <br>
+                            <img class="logo" src="logo/foret.svg"/>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            Particuliers comme entreprises, acheter ce n'est plus seulement acquérir un objet ou utiliser un service. C'est encourager le vendeur à continuer dans la même voie.
 
+                            <!--<br>-->
+                            <!--<br>-->
+                            <!--<div class="phrase">Et si les fabricants pouvaient montrer ce qu'ils font pour la planète ?</div>-->
+                            <!--<div class="phrase">Et si on pouvait proposer aux fabricants les changements que l'on veut ?</div>-->
+                            <!--<img class="logo" src="logo/produits.svg"/>-->
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <v-toolbar class="carousel">
+                                <v-toolbar-title>100mg de vitamines C c'est...</v-toolbar-title>
+                            </v-toolbar>
+                            <v-carousel interval="30000" hide-delimiters>
+                                <v-carousel-item>
+                                    <v-card><img class="logo" src="img/pomme.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>1 Pomme, en 1950</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card><img class="logo" src="img/pommes.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>10kg de pommes, aujourd'hui</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card>
+                                        <v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur la vitamine C ?</v-card-text>
+                                    </v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                            </v-carousel>
 
-                            <v-toolbar class="carousel"><v-toolbar-title>On utilise 1 litre d'eau pour:</v-toolbar-title></v-toolbar>
+                            <br>
+                            <br>
+                            <br>
+
+                            <v-toolbar class="carousel">
+                                <v-toolbar-title>1 litre d'eau c'est...</v-toolbar-title>
+                            </v-toolbar>
                             <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
                                     <v-card><img class="logo" src="img/eau.svg" style="max-width:50%"/></v-card>
-                                    <v-toolbar><v-toolbar-title>en cours...</v-toolbar-title></v-toolbar>
+                                    <v-toolbar>
+                                        <v-toolbar-title>en cours...</v-toolbar-title>
+                                    </v-toolbar>
                                 </v-carousel-item>
                                 <v-carousel-item>
-                                    <v-card><v-card-text class="phrase" style="height:13.6em;margin-left: auto;margin-right:auto"><br><br><br><br><br>Vous connaissez des choses sur l'eau ?</v-card-text></v-card>
-                                    <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
+                                    <v-card>
+                                        <v-card-text class="phrase" style="height:13.6em;margin-left: auto;margin-right:auto"><br><br><br><br><br>Vous connaissez des choses sur l'eau ?</v-card-text>
+                                    </v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title>
+                                    </v-toolbar>
                                 </v-carousel-item>
                             </v-carousel>
-                        <br>
-                        <br>
-                        <br>
 
-                        <v-toolbar class="carousel"><v-toolbar-title>On a 100mg de vitamines C dans:</v-toolbar-title></v-toolbar>
-                        <v-carousel interval="30000" hide-delimiters>
-                            <v-carousel-item>
-                                <v-card><img class="logo" src="img/pomme.svg" style="max-width:50%"/></v-card>
-                                <v-toolbar><v-toolbar-title>1 Pomme, en 1950</v-toolbar-title></v-toolbar>
-                            </v-carousel-item>
-                            <v-carousel-item>
-                                <v-card><img class="logo" src="img/pommes.svg" style="max-width:50%"/></v-card>
-                                <v-toolbar><v-toolbar-title>10kg de pommes, aujourd'hui</v-toolbar-title></v-toolbar>
-                            </v-carousel-item>
-                            <v-carousel-item>
-                                <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur la vitamine C ?</v-card-text></v-card>
-                                <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
-                            </v-carousel-item>
-                        </v-carousel>
 
-                        <br>
-                        <br>
-                        <br>
-                            <v-toolbar class="carousel"><v-toolbar-title>On émet 1 tonne de CO2 quand:</v-toolbar-title></v-toolbar>
+                            <br>
+                            <br>
+                            <br>
+                            <v-toolbar class="carousel">
+                                <v-toolbar-title>1 tonne de CO2 c'est...</v-toolbar-title>
+                            </v-toolbar>
                             <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
                                     <v-card><img class="logo" src="img/co2.svg" style="max-width:50%"/></v-card>
-                                    <v-toolbar><v-toolbar-title>en cours...</v-toolbar-title></v-toolbar>
+                                    <v-toolbar>
+                                        <v-toolbar-title>en cours...</v-toolbar-title>
+                                    </v-toolbar>
                                 </v-carousel-item>
                                 <v-carousel-item>
-                                    <v-card><v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur le CO2 ?</v-card-text></v-card>
-                                    <v-toolbar><v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title></v-toolbar>
+                                    <v-card>
+                                        <v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur le CO2 ?</v-card-text>
+                                    </v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title>
+                                    </v-toolbar>
                                 </v-carousel-item>
                             </v-carousel>
-                        <br>
-                        <br>
-                        <br>
+                            <br>
+                            <br>
+                            <br>
 
 
                             <br>
                             <br>
                             <div class="phrase">Elevons le niveau ensemble.</div>
-                            <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
-                            <br>
                             <br>
                             <v-card v-if="done" transition="scale-transition" origin="center center" class="carousel">
                                 <t-play :film="outro"></t-play>
@@ -105,6 +136,8 @@
                                 </v-card-actions>
                             </v-card>
                             <br>
+                            <div class="phrase">Donnons-nous les moyens de mieux choisir sans se priver.</div>
+                            <br>
                             <br>
                             <br>
                             <br>
@@ -112,9 +145,10 @@
                             <br>
                             <br>
                             <br>
-                    </v-flex>
-                </transition>
-            </v-layout>
+                        </span>
+                    </transition>
+                </v-layout>
+            </v-container>
         </v-app>
     </div>
 </template>
