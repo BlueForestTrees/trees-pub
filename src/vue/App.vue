@@ -18,9 +18,9 @@
                             <br>
                             <br>
                             <br>
-                            <div class="phrase">Acheter n'est plus seulement obtenir un objet ou utiliser un service.</div>
+                            <div class="phrase">Acheter, c'est obtenir un objet ou utiliser un service.</div>
                             <br>
-                            <div class="phrase">C'est permettre au fabricant à continuer dans la même voie.</div>
+                            <div class="phrase">Acheter, c'est aussi permettre au fabricant de répéter sa façon de faire.</div>
 
                             <!--<br>-->
                             <!--<br>-->
@@ -32,7 +32,48 @@
                             <br>
                             <br>
                             <v-toolbar class="carousel">
-                                <v-toolbar-title>100mg de vitamines C c'est...</v-toolbar-title>
+                                <v-toolbar-title>1 tonne de CO2 c'est...</v-toolbar-title>
+                            </v-toolbar>
+                            <v-carousel interval="30000" hide-delimiters>
+                                <v-carousel-item>
+                                    <v-card><img class="logo" src="img/avion.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Une personne qui fait 10000 km en avion</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card><img class="logo" src="img/voiture.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Une voiture qui fait 6000 km</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card><img class="logo" src="img/telephone.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Fabriquer et utiliser 20 iphones</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card><img class="logo" src="img/francais_co2.svg" style="max-width:50%"/></v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Un Français en 6 semaines</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-card>
+                                        <v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur le CO2 ?</v-card-text>
+                                    </v-card>
+                                    <v-toolbar>
+                                        <v-toolbar-title>Ajoutez-le sur BlueForest</v-toolbar-title>
+                                    </v-toolbar>
+                                </v-carousel-item>
+                            </v-carousel>
+
+                            <br>
+                            <br>
+                            <br>
+                            <v-toolbar class="carousel">
+                                <v-toolbar-title>On a 100mg de vitamines C en mangeant...</v-toolbar-title>
                             </v-toolbar>
                             <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
@@ -49,58 +90,10 @@
                                 </v-carousel-item>
                                 <v-carousel-item>
                                     <v-card>
-                                        <v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur la vitamine C ?</v-card-text>
+                                        <v-card-text class="phrase" style="height:13.6em"><br><br><br><br>Vous connaissez des choses sur la vitamine C ?<br>ou sur les pommes?</v-card-text>
                                     </v-card>
                                     <v-toolbar>
-                                        <v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title>
-                                    </v-toolbar>
-                                </v-carousel-item>
-                            </v-carousel>
-
-                            <br>
-                            <br>
-                            <br>
-
-                            <v-toolbar class="carousel">
-                                <v-toolbar-title>1 litre d'eau c'est...</v-toolbar-title>
-                            </v-toolbar>
-                            <v-carousel interval="30000" hide-delimiters>
-                                <v-carousel-item>
-                                    <v-card><img class="logo" src="img/eau.svg" style="max-width:50%"/></v-card>
-                                    <v-toolbar>
-                                        <v-toolbar-title>en cours...</v-toolbar-title>
-                                    </v-toolbar>
-                                </v-carousel-item>
-                                <v-carousel-item>
-                                    <v-card>
-                                        <v-card-text class="phrase" style="height:13.6em;margin-left: auto;margin-right:auto"><br><br><br><br><br>Vous connaissez des choses sur l'eau ?</v-card-text>
-                                    </v-card>
-                                    <v-toolbar>
-                                        <v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title>
-                                    </v-toolbar>
-                                </v-carousel-item>
-                            </v-carousel>
-
-
-                            <br>
-                            <br>
-                            <br>
-                            <v-toolbar class="carousel">
-                                <v-toolbar-title>1 tonne de CO2 c'est...</v-toolbar-title>
-                            </v-toolbar>
-                            <v-carousel interval="30000" hide-delimiters>
-                                <v-carousel-item>
-                                    <v-card><img class="logo" src="img/co2.svg" style="max-width:50%"/></v-card>
-                                    <v-toolbar>
-                                        <v-toolbar-title>en cours...</v-toolbar-title>
-                                    </v-toolbar>
-                                </v-carousel-item>
-                                <v-carousel-item>
-                                    <v-card>
-                                        <v-card-text class="phrase" style="height:13.6em"><br><br><br><br><br>Vous connaissez des choses sur le CO2 ?</v-card-text>
-                                    </v-card>
-                                    <v-toolbar>
-                                        <v-toolbar-title>Partagez-le sur BlueForest</v-toolbar-title>
+                                        <v-toolbar-title>Ajoutez-le sur BlueForest</v-toolbar-title>
                                     </v-toolbar>
                                 </v-carousel-item>
                             </v-carousel>
