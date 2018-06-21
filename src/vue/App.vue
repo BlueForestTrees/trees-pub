@@ -32,7 +32,7 @@
                             <br>
                             <br>
                             <v-toolbar class="carousel">
-                                <v-toolbar-title>1 tonne de CO2 c'est...</v-toolbar-title>
+                                <v-toolbar-title>1 tonne de CO2 est produite par...</v-toolbar-title>
                             </v-toolbar>
                             <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
@@ -50,7 +50,7 @@
                                 <v-carousel-item>
                                     <v-card><img class="logo" src="img/telephone.svg" style="max-width:50%"/></v-card>
                                     <v-toolbar>
-                                        <v-toolbar-title>Fabriquer et utiliser 20 iphones</v-toolbar-title>
+                                        <v-toolbar-title>La fabrication de 20 iphones</v-toolbar-title>
                                     </v-toolbar>
                                 </v-carousel-item>
                                 <v-carousel-item>
@@ -73,7 +73,7 @@
                             <br>
                             <br>
                             <v-toolbar class="carousel">
-                                <v-toolbar-title>On a 100mg de vitamines C en mangeant...</v-toolbar-title>
+                                <v-toolbar-title>Il y a 100mg de vitamines C dans...</v-toolbar-title>
                             </v-toolbar>
                             <v-carousel interval="30000" hide-delimiters>
                                 <v-carousel-item>
