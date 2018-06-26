@@ -30,8 +30,6 @@ const conf = {
         new CopyWebpackPlugin([{from: './src/img', to: 'img'}]),
         new CopyWebpackPlugin([{from: './src/browserconfig.xml', to: '.'}]),
         new CopyWebpackPlugin([{from: './src/logo', to: 'logo'}]),
-        new CopyWebpackPlugin([{from: './src/lottie', to: 'lottie'}]),
-        new CopyWebpackPlugin([{from: './src/S01', to: 'S01'}]),
         new webpack.DefinePlugin({
             VERSION: JSON.stringify(require("./package.json").version)
         }),
@@ -55,13 +53,14 @@ if (conf.mode === "development") {
 }
 
 if (conf.mode === "production") {
-    conf.plugins.push(new Visualizer({filename: '../visualizer/statistics.html'}));
+    conf.plugins.push(new Visualizer({filename: '../../visualizer/statistics.html'}));
     conf.output = {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist/show.blueforest.org'),
+        path: path.resolve(__dirname, 'dist/show.blueforest.org/static'),
         libraryTarget: 'var',
         library: 'Show'
     };
+    conf.plugins.push(new CopyWebpackPlugin([{from: 'nginx', to: '../nginx'}]));
 }
 
 module.exports = conf;
